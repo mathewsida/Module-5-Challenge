@@ -22,9 +22,8 @@ $(document).ready(function () {
     })
     function timeTracker() 
     {
-        const d = new Date
-        var timeNow = d.getTime;
-        console.log(timeNow)
+        var timeNow = moment().hour();
+
         $(".time-block").each(function () {
             var blockTime = parseInt($(this).attr("id").split("hour")[1]);
         
