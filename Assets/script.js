@@ -22,11 +22,13 @@ $(document).ready(function () {
     })
     function timeTracker() 
     {
-        var timeNow = moment().hour();
-
+        const d = new Date
+        var timeNow = d.getTime;
+        console.log(timeNow)
         $(".time-block").each(function () {
             var blockTime = parseInt($(this).attr("id").split("hour")[1]);
-
+        
+            
             if (blockTime < timeNow) {
                 $(this).removeClass("future");
                 $(this).removeClass("present");
